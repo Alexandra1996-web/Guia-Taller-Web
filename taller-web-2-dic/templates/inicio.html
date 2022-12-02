@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-amber-100">
+    <div class="flex flex-wrap">
+    {% for personaje in personajes %}
+        <div class="m-10 bg-white p-10 rounded-xl text-center">
+            <img src="{{personaje['image']}}" alt="{{personaje['name']}}" class="rounded-xl">
+            <h1 class="text-xl font-bold">  {{personaje['name']}} </h1>
+            <p class="italic"> Especie: {{personaje['species']}} </p>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
